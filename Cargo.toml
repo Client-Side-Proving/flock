@@ -28,7 +28,8 @@ flock-transcript = { path = "crates/flock-transcript" }
 rayon = "1.10"
 sha2 = { version = "0.10", features = ["asm"] }
 rand_core = "0.9"
-blake3 = "1.5"
+# Keep digest 0.11 traits separate from ProveKit's registry-pinned BLAKE3.
+blake3 = { git = "https://github.com/BLAKE3-team/BLAKE3", rev = "f3149ec5bb5449af877ba20377a11008ff499fa2" }
 serde = { version = "1", features = ["derive"] }
 bincode = "1.3"
 toml = "0.8"
